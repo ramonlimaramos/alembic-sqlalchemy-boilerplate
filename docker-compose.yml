@@ -1,0 +1,28 @@
+version: '3.5'
+services:
+
+  postgres:
+    container_name: postgres
+    image: postgres:11
+    hostname: postgres
+    environment:
+      POSTGRES_MULTIPLE_DATABASES: project_name, project_name-integration, project_name-migration
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+#    command:
+#      - -c
+#      - config_file=/etc/postgresql/postgresql.conf
+    ports:
+      - "15433:5432"
+    networks:
+      ssf-network:
+        aliases:
+          - postgres
+    volumes:
+      - ./extras/postgres/scripts:/docker-entrypoint-initdb.d
+#      - ./extras/postgres/postgresql.conf:/etc/postgresql/postgresql.conf
+
+networks:
+  ssf-network:
+    name: ssf-network
+    driver: bridge

@@ -1,0 +1,58 @@
+# Ignore Python build artifacts.
+MANIFEST
+build/
+bucket/
+dist/
+*.egg-info/
+*.pyc
+*.pyo
+docs/_build
+extras/*/data
+
+!.gitkeep
+
+# Ignore Coverage report.
+.coverage
+coverage.xml
+.coverage.*
+cov_annotate
+cov_html
+cov.xml
+
+# Ignore pyenv files.
+.python-version
+
+# Ignore virtualenv environments.
+.venv*/
+venv*/
+
+# Ignore Vagrant runtime files.
+.vagrant/
+
+# Ignore settings for various IDEs.
+.idea/
+.project/
+.pydevproject/
+nbproject/
+.vscode/
+
+# Ignore OS metadata files.
+.DS_Store
+
+# Ignore pycache files
+.pytest_cache
+__pycache__/
+static/temp
+!static/temp/.keep
+
+# Environment configuration related files
+.env
+.travis/env
+!.travis/env/.env
+.travis/env.tar
+
+# Makefile stuff
+.checkpoint
+
+# Bucket and COS
+bucket

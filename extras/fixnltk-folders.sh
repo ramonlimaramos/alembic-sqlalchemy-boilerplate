@@ -1,0 +1,3 @@
+#!/bin/sh
+mkdir -p '/nltk_data' '/usr/local/nltk_data' '/usr/local/share/nltk_data' '/usr/local/lib/nltk_data' '/usr/share/nltk_data' '/usr/local/share/nltk_data' '/usr/lib/nltk_data' '/usr/local/lib/nltk_data'
+chown 1000:1000 '/nltk_data' '/usr/local/nltk_data' '/usr/local/share/nltk_data' '/usr/local/lib/nltk_data' '/usr/share/nltk_data' '/usr/local/share/nltk_data' '/usr/lib/nltk_data' '/usr/local/lib/nltk_data'
